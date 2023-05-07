@@ -4,8 +4,8 @@ interface PersonagensProps{
 
 export default function Personagens(props: PersonagensProps) {
     
-    return (
-        <div className={`flex flex-col`}>
+    function rederizarPersonagem(){
+        return(
             <ul>
                 {
                     props.personagens.map((p:any) => (
@@ -13,7 +13,8 @@ export default function Personagens(props: PersonagensProps) {
                     ))
                 }
             </ul>
-        </div>
-  )
+        )
+    }
+    return ( rederizarPersonagem() )
 }
 

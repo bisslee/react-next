@@ -4,18 +4,18 @@ export default function useProcessando() {
     const [processando, setProcessando] = useState<boolean>(false)
 
 
-    function iniciarProcessamnto(){
+    function iniciarProcessamento(){
         setProcessando(true)
     }
 
     
-    function finalizarProcessamnto(){
+    function finalizarProcessamento(){
         setProcessando(false)
     }
 
     return {
         processando, 
-        iniciarProcessamnto, 
-        finalizarProcessamnto
+        iniciarProcessamento, 
+        finalizarProcessamento
     }
 }

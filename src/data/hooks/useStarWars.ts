@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 export default function useStarWars() {
 
-    const {processando, iniciarProcessamnto, finalizarProcessamnto}= useProcessando()
+    const {processando, iniciarProcessamento, finalizarProcessamento}= useProcessando()
     const [personagens, setPersonagens] = useState<any>([])
 
     async function chamadaAPI() {
@@ -14,11 +14,11 @@ export default function useStarWars() {
 
      async  function obterPersonagens(){
         try{
-            iniciarProcessamnto()
+            iniciarProcessamento()
             await chamadaAPI()
         }
         finally{
-            finalizarProcessamnto()
+            finalizarProcessamento()
         }
      }
     return {processando, personagens, obterPersonagens}
